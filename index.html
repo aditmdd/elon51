@@ -10,6 +10,41 @@
       <link rel="stylesheet" href="css/fonts.css">
       <link rel="stylesheet" href="css/style.css">
       <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;}html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel{display: block;}</style>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Burn',     10],
+          ['Pancake',      80],
+          ['Dev Wallet', 5],
+		  ['Marketing Wallet', 5],
+        ]);
+
+        const options = {
+			is3D: true,
+			chart: {},
+			chartArea: { backgroundColor: 'transparent',width:'100%' },
+			width: '100%',
+			height: '100%',
+			legend: { 
+				position: 'none',
+				alignment: 'start', 
+				"textStyle": {
+					color: '#ffffff', 
+					fontSize: 15
+				},
+			},
+			backgroundColor: 'transparent',
+			hAxis: { title: '' },
+			};
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
    </head>
    <body>
       <div class="preloader">
@@ -107,7 +142,18 @@ Mixed with the inspiration of elons desire to reach mars and chill out with his 
                   <h6 class="text-secondary">Smart Tokenomics</h6>
                   <h3 style="color: #fff;">Tokenomics</h3>
                   <div class="row row-30">
-                     <div class="col-md-12 col-lg-12"> <br><img src="images/tokenomics.png?v=1.1"> </div>
+                     <div id="piechart_3d" class="chart">
+                        
+                     </div>
+										<p style="color: #ffffff;
+                              margin-top: -90px !important;
+                              display: block;
+                              margin: auto;
+                              padding-bottom: 40px;"><b>Total Supply 1.000.000.000</b><br>
+											- Burn — 10%<br>
+											- Pancake — 80%<br>
+											- Dev Wallet — 5%<br>
+											- Marketing Wallet — 5%<br></p>
                   </div>
                </div>
             </div>
@@ -127,22 +173,22 @@ Mixed with the inspiration of elons desire to reach mars and chill out with his 
                         <div class="card-group-custom card-group-corporate" id="accordion1" role="tablist" aria-multiselectable="false">
                            <article class="card card-custom card-corporate">
                               <div class="card-header" role="tab">
-                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">Website V1.0 Released</span></span></span></span></span></a></div>
+                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">Website Live</span></span></span></span></span></a></div>
                               </div>
                            </article>
                            <article class="card card-custom card-corporate">
                               <div class="card-header" role="tab">
-                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">Public BSC Launch </span></span></span></span></span></a></div>
+                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">Pancake Swap Launch </span></span></span></span></span></a></div>
                               </div>
                            </article>
                            <article class="card card-custom card-corporate">
                               <div class="card-header" role="tab">
-                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">Listed on CMC & CG</span></span></span></span></span></a></div>
+                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">500 Telegram Members</span></span></span></span></span></a></div>
                               </div>
                            </article>
                            <article class="card card-custom card-corporate">
                               <div class="card-header" role="tab">
-                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">High Marketing Start</span></span></span></span></span></a></div>
+                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">Big Influencer Marketing</span></span></span></span></span></a></div>
                               </div>
                            </article>
                         </div>
@@ -151,17 +197,17 @@ Mixed with the inspiration of elons desire to reach mars and chill out with his 
                         <div class="card-group-custom card-group-corporate" id="accordion2" role="tablist" aria-multiselectable="false">
                            <article class="card card-custom card-corporate">
                               <div class="card-header" role="tab">
-                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">Century App V1 Release</span></span></span></span></span></a></div>
+                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">Break 1M MCAP</span></span></span></span></span></a></div>
                               </div>
                            </article>
                            <article class="card card-custom card-corporate">
                               <div class="card-header" role="tab">
-                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">Contract Audit</span></span></span></span></span></a></div>
+                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">CNTOKEN Ads</span></span></span></span></span></a></div>
                               </div>
                            </article>
                            <article class="card card-custom card-corporate">
                               <div class="card-header" role="tab">
-                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">Multi Chain Bridge</span></span></span></span></span></a></div>
+                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">NFT Collection</span></span></span></span></span></a></div>
                               </div>
                            </article>
                         </div>
@@ -175,12 +221,12 @@ Mixed with the inspiration of elons desire to reach mars and chill out with his 
                            </article>
                            <article class="card card-custom card-corporate">
                               <div class="card-header" role="tab">
-                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">Listed on CEX</span></span></span></span></span></a></div>
+                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">Listed on CMC & CG</span></span></span></span></span></a></div>
                               </div>
                            </article>
                            <article class="card card-custom card-corporate">
                               <div class="card-header" role="tab">
-                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">Features Improvement Century APP</span></span></span></span></span></a></div>
+                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">Listed on CEX</span></span></span></span></span></a></div>
                               </div>
                            </article>
                         </div>
@@ -189,17 +235,17 @@ Mixed with the inspiration of elons desire to reach mars and chill out with his 
                         <div class="card-group-custom card-group-corporate" id="accordion4" role="tablist" aria-multiselectable="false">
                            <article class="card card-custom card-corporate">
                               <div class="card-header" role="tab">
-                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">Business Expansion</span></span></span></span></span></a></div>
+                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">50K+ Holders</span></span></span></span></span></a></div>
                               </div>
                            </article>
                            <article class="card card-custom card-corporate">
                               <div class="card-header" role="tab">
-                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">100,000 Holders</span></span></span></span></span></a></div>
+                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">Website Redesign v2</span></span></span></span></span></a></div>
                               </div>
                            </article>
                            <article class="card card-custom card-corporate">
                               <div class="card-header" role="tab">
-                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">To be announce</span></span></span></span></span></a></div>
+                                 <div class="card-title"><a class="collapsed" id="accordion1-card-head-hxapwahb" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-onwkttkd" aria-controls="accordion1-card-body-onwkttkd" aria-expanded="false" role="button"><span class="schedule-classic"><span class="unit unit-spacing-md align-items-center d-block d-md-flex"><span class="unit-left"><span class="unit-body"><span class="schedule-classic-content"><span class="schedule-classic-title heading-4">Multi Chain Bridge</span></span></span></span></span></a></div>
                               </div>
                            </article>
                         </div>
@@ -212,7 +258,7 @@ Mixed with the inspiration of elons desire to reach mars and chill out with his 
             <div class="container">
                <h6>Grow Together!</h6>
                <h3>Join the community</h3>
-               <div class="row row-30 justify-content-center"> <a class="button button-secondary" href="https://t.me/thecenturycoin" target="_blank" data-triangle=".button-overlay"><span>Join Telegram Group</span><span class="button-overlay"></span></a> </div>
+               <div class="row row-30 justify-content-center"> <a class="button button-secondary" href="#" target="_blank" data-triangle=".button-overlay"><span>Join Telegram Group</span><span class="button-overlay"></span></a> </div>
             </div>
             <div class="layer layer-01">
                <svg width="126" height="126" viewbox="0 0 126 126" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -377,7 +423,7 @@ Mixed with the inspiration of elons desire to reach mars and chill out with his 
          <section class="section section-lg bg-gray-900">
             <div class="container">
                <div class="row row-30">
-                  <div class="col-xs-10 col-lg-3 align-self-center"><a class="brand" href="index.html"><img class="brand-logo-light" src="images/century-logo.png.png" srcset="images/century-logo.png" alt="century"></a></div>
+                  <div class="col-xs-10 col-lg-3 align-self-center"><a class="brand" href="index.html"><img class="brand-logo-light" src="images/century-logo.png.png" srcset="images/century-logo.png" alt="ELON51"></a></div>
                   <div class="col-xs-10 col-sm-6 col-lg-4">
                      <div class="event-detail">
                         <p class="event-detail-address big" data-splitting>
@@ -394,7 +440,7 @@ Mixed with the inspiration of elons desire to reach mars and chill out with his 
                      <div class="event-detail">
                         <ul class="list-inline list-inline-xs">
                            <li data-wow-delay=".2s">
-                              <a class="icon icon-rect icon-xs icon-white fa-telegram" href="https://t.me/thecenturycoin" target="_blank" data-triangle=".icon-rect-overlay" style="color: #000;" target="_blank">
+                              <a class="icon icon-rect icon-xs icon-white fa-telegram" href="#" target="_blank" data-triangle=".icon-rect-overlay" style="color: #000;" target="_blank">
                                  <div class="icon-rect-overlay"></div>
                               </a>
                            </li>
